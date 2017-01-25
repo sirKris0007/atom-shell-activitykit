@@ -1,8 +1,9 @@
-var app      = require('app')
-  , Menu     = require('menu')
-  , MenuItem = require('menu-item')
-  , BW       = require('browser-window')
+var app      = require('electron').app
+  , Menu     = require('electron').Menu
+  , MenuItem = require('electron').MenuItem
+  , BW       = require('electron').BrowserWindow
   , win;
+
 
 app.on('ready', function() {
   win = new BW({
@@ -15,7 +16,7 @@ app.on('ready', function() {
     win = null;
   });
 
-  win.loadUrl('file://' + __dirname + '/index.html');
+  win.loadURL('file://' + __dirname + '/index.html');
   win.show();
 
   var menu_tmpl = [{
