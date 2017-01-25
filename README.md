@@ -13,7 +13,13 @@ visualize android activity stack. Based on [d3](http://d3js.org) & [activitykit]
 ## run
 
 ```sh
-$ npm install -g electron-prebuilt
+$ sudo npm install -g electron-prebuilt
+$ sudo npm install -g bower
+```
+
+In case of possible problems with proxy, you can try to modify the git config file
+```sh
+$ git config --global url."https://".insteadOf git://
 ```
 
 ```sh
